@@ -34,7 +34,7 @@ public class ScheduledNotificationReceiver extends BroadcastReceiver {
         Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
         builder.setSound(uri);
         builder.setLights(Color.BLUE, 200, 200);
-        builder.setVibrate(new long[] { 1000, 1000, 1000});
+        builder.setVibrate(new long[] {1000, 1000, 1000});
         builder.setContentTitle("Task Manager Reminder");
         builder.setContentText(name);
         builder.setSmallIcon(android.R.drawable.ic_dialog_info);

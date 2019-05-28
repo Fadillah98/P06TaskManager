@@ -40,7 +40,9 @@ public class AddActivity extends AppCompatActivity {
                     Toast.makeText(getBaseContext(), "Name cannot be empty", Toast.LENGTH_LONG).show();
                 } else if (desc.length() == 0) {
                     Toast.makeText(getBaseContext(), "Description cannot be empty", Toast.LENGTH_LONG).show();
-                } else {
+                } else if (time.length() == 0) {
+                    Toast.makeText(getBaseContext(), "Time cannot be empty", Toast.LENGTH_LONG).show();
+                }else {
                     DBHelper db = new DBHelper(AddActivity.this);
                     db.insertTask(name, desc);
                     Calendar cal = Calendar.getInstance();

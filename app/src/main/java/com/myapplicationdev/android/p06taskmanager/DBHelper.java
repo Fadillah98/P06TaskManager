@@ -31,15 +31,6 @@ public class DBHelper extends SQLiteOpenHelper {
                 + DESCRIPTION + " TEXT )";
         db.execSQL(createTableSql);
         Log.i("info", "created tables");
-
-        for (int i = 1; i< 3; i++) {
-            ContentValues values = new ContentValues();
-            values.put(TASK_NAME, "Task " + i);
-            values.put(DESCRIPTION, "Description " + i);
-            db.insert(TABLE_TASK, null, values);
-        }
-        Log.i("info", "dummy records inserted");
-
     }
 
     @Override
